@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style - Copy.css">
+  <title>253 Project</title>
+
+  <style>
+  body {
+      background-image: url("assets/images/backgrndS.jpg");
+
+  }
+
+  </style>
+
+
+ <script type="text/javascript">
+    <!--
+       function getConfirmation(){
+          var retVal = confirm("Are you Sure you want to Approve this Applicaion?");
+          if( retVal == true ){
+             document.write ("");
+             return true;
+          }
+          else{
+             document.write ("");
+             return false;
+          }
+       }
+    //-->
+ </script>
+</head>
+<div>
+
+<nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+<div class="container">
+
+  <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#myTogglerNav"
+  aria-controls="myTogglerNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand" href="home">
+
+<img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo" title="Bank">
+
+</a>
+
+<img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+<div class="collapse navbar-collapse" id="myTogglerNav">
+  <div class="navbar-nav ml-sm-auto">
+
+    <a class="nav-item nav-link navbar-btn btn btn-block mt-3 mb-2 mx-sm-auto active" href="admin-home">
+
+  <img class="ml-sm-auto" src="assets/images/home-5.png" style="width:25px" alt="Home" title="Home"></a>
+
+  <li class="nav-item navbar-btn btn btn-block mx-sm-auto dropdown">
+
+
+        <a class="nav-link dropdown-toggle" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#User">
+          <img class="ml-sm-auto" src="assets/images/Admin.png" style="width:35px" alt="User" title="Adminstrator"></a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Info</a>
+          <a class="dropdown-item" href="#">Change Password</a>
+          <a class="dropdown-item" href="logout">Logout</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Delete Account</a>
+        </div>
+
+      </li>
+
+</div> <!-- collapse navbar -->
+</div> <!-- navbar ml-sm-auto  -->
+</div> <!-- container -->
+
+
+</nav> <!-- navbar  -->
+
+
+<div class="container text-center">
+
+<h1></h1>
+
+
+<div class="wrapper2">
+<div class="form-signin2">
+
+  <form *ngIf="application" (submit)="onApprove()">
+    <div class="form-group row">
+      <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Application ID</div></strong></label>
+      <div class="col-sm-8">
+        <p>{{application.app_id}}</p>
+      </div>
+    </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Name</div></strong></label>
+        <div class="col-sm-8">
+          <p>{{application.applicant_name}}</p>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">National ID</div></strong></label>
+        <div class="col-sm-8">
+          <p>{{application.applicant_national_id}}</p>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Phone Number</div></strong></label>
+        <div class="col-sm-8">
+          <p>{{application.applicant_phone_number}}</p>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Bank Account Number</div></strong></label>
+        <div class="col-sm-8">
+          <p>{{application.applicant_bank_account}}</p>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Username</div></strong></label>
+        <div class="col-sm-8">
+          <p>{{application.applicant_username}}</p>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="InputBankAccount2" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10">Email</div></strong></label>
+
+        <div class="col-sm-8">
+          <p>{{application.applicant_email}}</p>
+        </div>
+      </div>
+
+
+      <h2>Teller with the same username? {{isTeller}} </h2>
+
+      <h3>Bank Accounts with Same National Id</h3>
+      <table class="table table table-bordered table-hover col-sm-12">
+        <thead class="thead-dark">
+          <tr>
+            <th  scope="col">Account Number</th>
+            <th  scope="col">National ID</th>
+            <th  scope="col">Name</th>
+            <th  scope="col">Phone</th>
+            <th  scope="col">Email</th>
+            <th scope="col">Balance</th>
+            <th  scope="col">Currency</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let acc of accounts">
+            <td>{{acc.account_number}}</td>
+            <td>{{acc.client_nid}}</td>
+            <td>{{acc.client_name}}</td>
+            <td>{{acc.phone}}</td>
+            <td>{{acc.email}}</td>
+            <td>{{acc.balance}}</td>
+            <td>{{acc.currency_name}}</td>
+          </tr>
+
+          <!-- <tr>
+            <td>921</td>
+            <td>921921</td>
+            <td>Ahmad El Rouby</td>
+            <td>900</td>
+            <td>EGP</td>
+          </tr>
+
+          <tr>
+            <td>921</td>
+            <td>921921</td>
+            <td>Ahmad El Rouby</td>
+            <td>900</td>
+            <td>EGP</td>
+          </tr>
+          <tr>
+            <td>921</td>
+            <td>921921</td>
+            <td>Ahmad El Rouby</td>
+            <td>900</td>
+            <td>EGP</td>
+          </tr>
+
+
+          <tr>
+            <td>921</td>
+            <td>921921</td>
+            <td>Ahmad El Rouby</td>
+            <td>900</td>
+            <td>EGP</td>
+          </tr> -->
+
+
+
+        </tbody>
+      </table>
+
+      <div class="col-sm-12 d-flex d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Approve Application</button>
+
+
+
+
+     </div>
+
+
+        <div *ngIf="error" class="alert alert-danger" role="alert">
+          {{error}}
+        </div>
+
+</form>
+
+
+
+
+
+</div>
+</div>
+
+</div><!-- content container -->
+
+
+</div>
+</html>

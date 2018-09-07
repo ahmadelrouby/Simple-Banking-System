@@ -1,0 +1,114 @@
+
+<div>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style - Copy.css">
+  <style>
+
+
+  body {
+      background-image: url("assets/images/backgrndS.jpg");
+
+  }
+
+  </style>
+<nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+<div class="container">
+
+  <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#myTogglerNav"
+  aria-controls="myTogglerNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand" href="home">
+
+<img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo" title="Bank">
+
+</a>
+
+<img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+<div class="collapse navbar-collapse" id="myTogglerNav">
+  <div class="navbar-nav ml-sm-auto">
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mt-3 mb-2 mx-sm-auto active" href="admin-home">
+
+  <img class="ml-sm-auto" src="assets/images/home-5.png" style="width:25px" alt="Home" title="Home"></a>
+
+  <li class="nav-item navbar-btn btn btn-block mx-sm-auto dropdown">
+
+
+        <a class="nav-link dropdown-toggle" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#User">
+          <img class="ml-sm-auto" src="assets/images/Admin.png" style="width:35px" alt="User" title="Adminstrator"></a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Info</a>
+          <a class="dropdown-item" href="#">Change Password</a>
+          <a class="dropdown-item" href="logout">Logout</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Delete Account</a>
+        </div>
+
+      </li>
+
+
+
+
+
+
+
+</div> <!-- collapse navbar -->
+</div> <!-- navbar ml-sm-auto  -->
+</div> <!-- container -->
+
+
+</nav> <!-- navbar  -->
+
+
+<div class="container text-center">
+
+<h1></h1>
+<div class="row">
+
+<div class="col">
+  <h4><font color="BLACK">Pending Applications</font></h4>
+    <p><em>Adminstrator</em></p>
+  </div>
+
+  <div class="col">
+<p id="Date"></p>
+<script>
+var d = new Date();
+document.getElementById("Date").innerHTML = d;
+</script>
+
+</div>
+
+</div>
+
+<table class="table table-striped table table-bordered table-hover table-light ">
+  <thead class="thead-dark">
+    <tr>
+      <th  scope="col">Application Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone Number</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let app of applications">
+      <th scope="row"><a [routerLink]="applicationId(app.app_id)">{{app.app_id}}</a></th>
+      <td>{{app.applicant_name}}</td>
+      <td>{{app.applicant_phone_number}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+</div>

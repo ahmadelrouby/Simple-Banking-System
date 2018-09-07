@@ -1,0 +1,117 @@
+
+.carousel-inner img {
+
+    width: 50%; /* Set width to 100% */
+    margin: auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+.wrapper2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-signin2 {
+  /* max-width: 500px; */
+  padding:100px 0px 100px;
+  margin:auto;
+  background-color: rgba(236, 240, 241, 0.7);
+  border: 1px solid rgba(236, 240, 241, 1);
+  border-radius: 10%;
+}
+
+.form-signin2 .form-signin-heading2,
+.form-signin2 .checkbox2 {
+
+}
+.form-signin2 .checkbox2 {
+  font-weight: normal;
+}
+.form-signin2 .form-control2 {
+
+  position: center;
+  font-size: 16px;
+  height: auto;
+  padding: autofocus;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.form-signin2 .form-control2:focus {
+  z-index: 2;
+}
+.form-signin2 input[type="text"] {
+  margin-bottom: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin2 input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

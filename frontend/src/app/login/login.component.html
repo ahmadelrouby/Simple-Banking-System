@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>253 Project</title>
+
+  <style>
+
+  </style>
+
+</head>
+<div>
+
+<nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+<div class="container">
+
+  <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#myTogglerNav"
+  aria-controls="myTogglerNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand" href="home">
+
+<img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo" title="Bank">
+
+</a>
+
+<img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+<div class="collapse navbar-collapse" id="myTogglerNav">
+  <div class="navbar-nav ml-sm-auto">
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mt-2 mx-sm-auto active" href="#Home">
+
+  <img src="assets/images/home-5.png" style="width:25px" alt="Home" title="Home"></a>
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mx-sm-auto" href="#About">
+    <img src="assets/images/info-256.png" style="width:25px" alt="About" title="About"></a>
+
+
+</div> <!-- collapse navbar -->
+</div> <!-- navbar ml-sm-auto  -->
+</div> <!-- container -->
+
+
+</nav> <!-- navbar  -->
+
+
+<div class="container">
+
+  <div class="row row align-items-center">
+
+<div class="wrapper">
+  <form class="form-signin" [formGroup]="form" (submit)="onLoginSubmit()" >
+    <input formControlName="username" type="text" style="margin-top:2.0em" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+    <input formControlName="account_password" type="password" class="form-control" name="password" placeholder="Password" required=""/>
+    <label class="checkbox">
+      <input type="checkbox"value="remember-me" id="rememberMe" name="rememberMe"> <font face="arial" color=#E8E0DE style="margin-right:3.3em">Remember me</font></label>
+
+      <span class="psw"><a  href = "/forget-pwd"><font color="#E8E0DE">Forgot Password?</font></a></span>
+
+    <button [disabled]="processing" class="btn btn-lg btn-success btn-block" type="submit">Login</button>
+
+   <a class="btn btn-md btn-danger" style="margin-top:2.0em" href="/register"><font color="#E8E0DE"> Register </font> </a>
+
+
+      <div *ngIf="error" class="alert alert-danger" role="alert">
+        {{error}}
+      </div>
+
+
+</form>
+
+
+
+</div>
+
+
+
+</div>
+</div><!-- content container -->
+
+
+
+<script src="assets/js/jquery.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</div>
+</html>

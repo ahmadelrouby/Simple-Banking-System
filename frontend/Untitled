@@ -1,0 +1,3 @@
+Users Part
+
+db.createCollection('users')

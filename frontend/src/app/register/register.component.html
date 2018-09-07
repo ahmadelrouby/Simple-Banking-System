@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style - Copy.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <title>253 Project</title>
+
+  <style>
+
+
+  </style>
+
+</head>
+<div>
+
+<nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+<div class="container">
+
+  <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#myTogglerNav"
+  aria-controls="myTogglerNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand" href="home">
+
+<img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo">
+
+</a>
+
+<img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+<div class="collapse navbar-collapse" id="myTogglerNav">
+  <div class="navbar-nav ml-sm-auto">
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mt-2 mx-sm-auto active" href="#Home">
+  <img src="assets/images/home-5.png" style="width:25px" alt="Home"></a>
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mx-sm-auto" href="#About">
+    <img src="assets/images/info-256.png" style="width:25px" alt="About"></a>
+
+
+</div> <!-- collapse navbar -->
+</div> <!-- navbar ml-sm-auto  -->
+</div> <!-- container -->
+
+
+</nav> <!-- navbar  -->
+
+<div class="container">
+
+<h1></h1>
+
+<div class="wrapper2">
+<div class="form-signin2">
+
+<form [formGroup]="form" (submit)="onCreateAccountSubmit()">
+
+  <h1 style="text-align:center; margin-top:-2em; margin-bottom:1em;">Register</h1>
+
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="name" type="text" class="form-control" id="name" placeholder="Client Name">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="username" type="text" class="form-control" id="username" placeholder="Username">
+      </div>
+    </div>
+
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="password" type="password" class="form-control" id="password" placeholder="password">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="nid" type="text" class="form-control" id="nid" placeholder="Client National ID Number">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="bank_account" type="text" class="form-control" id="bank_account" placeholder="Bank Account Number">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="phone" type="text" class="form-control" id="phone" placeholder="Phone Number">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="InputBankAccount1" class="col-sm-2 col-form-label"><strong>  <div class="col-sm-10"></div></strong></label>
+      <div class="col-sm-8">
+        <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email Address">
+      </div>
+    </div>
+
+
+    <div class="col-sm-115 d-flex d-flex justify-content-center">
+
+  <button type="submit" [disabled] = "processing" class="btn btn-primary">Send Application</button>
+
+   </div>
+
+
+      <div *ngIf="error" class="alert alert-danger" role="alert">
+        {{error}}
+      </div>
+
+
+</form>
+
+
+
+</div>
+</div>
+
+
+
+
+</div> <!--Container-->
+
+
+
+<script src="assets/js/jquery.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+</div>
+</html>

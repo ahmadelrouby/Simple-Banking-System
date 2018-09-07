@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style - Copy.css">
+  <title>253 Project</title>
+
+  <style>
+  body {
+      background-image: url("assets/images/backgrndS.jpg");
+
+  }
+
+  </style>
+
+</head>
+<div>
+
+  <nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+  <div class="container">
+
+    <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#myTogglerNav"
+    aria-controls="myTogglerNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="home">
+
+  <img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo" title="Bank">
+
+  </a>
+
+  <img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+  <div class="collapse navbar-collapse" id="myTogglerNav">
+    <div class="navbar-nav ml-sm-auto">
+
+    <a class="nav-item nav-link navbar-btn btn btn-block mt-3 mb-2 mx-sm-auto active" href="client-home">
+
+    <img class="ml-sm-auto" src="assets/images/home-5.png" style="width:25px" alt="Home" title="Home"></a>
+
+    <li class="nav-item navbar-btn btn btn-block mx-sm-auto dropdown">
+
+
+          <a class="nav-link dropdown-toggle" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#User">
+            <img class="ml-sm-auto" src="assets/images/Client.png" style="width:35px" alt="User" title="User"></a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="client-update-info">Update Info</a>
+            <a class="dropdown-item" href="client-change-pwd">Change Password</a>
+            <a class="dropdown-item" href="logout">Logout</a>
+
+          </div>
+
+        </li>
+
+
+
+
+
+
+
+  </div> <!-- collapse navbar -->
+  </div> <!-- navbar ml-sm-auto  -->
+  </div> <!-- container -->
+
+
+  </nav> <!-- navbar  -->
+
+
+<div class="container text-center">
+
+<h1></h1>
+<div class="row">
+
+<div class="col">
+  <h2><font color="BLACK">WELCOME!</font></h2>
+    <h3><em>{{name}}</em></h3>
+  </div>
+
+  <div class="col">
+<p id="Date"></p>
+<script>
+var d = new Date();
+document.getElementById("Date").innerHTML = d;
+</script>
+
+</div>
+
+</div>
+
+<div class="wrapper2">
+<div class="form-signin2">
+
+    <div class="row">
+      <div class="col-sm-6">
+
+
+      <a  href="client-view-accounts" >
+        <img src="assets/images/Acc.png" width="200px" alt="Trans">
+        <p><strong> <font color="#5DADE2">View Accounts</font> </strong></p>
+
+      </a>
+      </div>
+
+      <a  href="client-transfer-money">
+        <img src="assets/images/Transf.png" width="210px" alt="Trans">
+        <p><strong> <font color="#5DADE2">Transfer Money</font> </strong></p>
+
+      </a>
+
+
+</div>
+</div>
+</div><!-- content container -->
+
+
+</div>
+<script src="assets/js/jquery.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</div>
+</html>

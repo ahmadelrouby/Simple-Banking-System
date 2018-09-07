@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style - Copy.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+
+
+  <title>253 Project</title>
+
+
+
+</head>
+<div>
+
+<nav id="navbar-site" class="navbar nav-pills navbar-dark navbar-expand-sm nav-justified" style="background: rgba(0, 0, 0, 0.7)">
+
+
+<div class="container">
+
+  <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#myTogglerNav"
+  aria-controls="myTogglerNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand" href="home">
+
+<img src="assets/images/bank2.png" style="width:50px" alt="Bank Logo" title="Bank">
+
+</a>
+
+<img class="img-fluid ml-sm-auto" src="assets/images/logo (1).png" style="width:90px" alt="Online Banking" >
+
+<div class="collapse navbar-collapse" id="myTogglerNav">
+  <div class="navbar-nav ml-sm-auto">
+
+  <a class="nav-item nav-link navbar-btn btn btn-block mt-3 mb-2 mx-sm-auto active" href="teller-home">
+
+  <img  src="assets/images/home-5.png" style="width:25px" alt="Home" title="Home"></a>
+
+  <li class="nav-item navbar-btn btn btn-block mx-sm-auto dropdown">
+
+
+        <a class="nav-link dropdown-toggle" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#User">
+          <img  src="assets/images/Teller2.png" style="width:35px" alt="User" title="Teller"></a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Info</a>
+          <a class="dropdown-item" href="logout">Logout</a>
+        </div>
+
+      </li>
+
+
+</div> <!-- collapse navbar -->
+</div> <!-- navbar ml-sm-auto  -->
+</div> <!-- container -->
+
+
+</nav> <!-- navbar  -->
+
+
+<div class="container text-center">
+
+<h1></h1>
+
+<div class="wrapper2">
+<div class="form-signin2">
+
+    <div class="row">
+      <div class="col-sm-6 mb-2">
+
+
+        <a href="teller-new-client">
+          <img src="assets/images/client3.png" width="60px" alt="Teller">
+          <p style="font-size:12px"><strong> <font color="#5DADE2">Add Client</font> </strong></p>
+
+        </a>
+
+
+      </div>
+
+      <div class="col-sm-6 mb-2">
+
+
+        <div class="btn-group">
+
+      <a  href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="assets/images/client2.png" width="60px" alt="Trans">
+        <p style="font-size:12px"><strong> <font color="#5DADE2">Create Exsisting Client Account</font> </strong></p>
+
+      </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button"><a href="teller-new-account/current">Current</a></button>
+            <button class="dropdown-item" type="button"><a href="teller-new-account/savings">Savings</a></button>
+          </div>
+        </div>
+
+
+    </div>
+      </div>
+
+      <div class="row"> <!--Row2-->
+
+        <div class="col-sm-6"> <!--CLIENT SETTINGS-->
+
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="assets/images/Client.png" width="60px" alt="Client">
+            <p style="font-size:12px"><strong> <font color="#5DADE2">Client Settings</font> </strong></p>
+
+          </a>
+
+
+      <div class="dropdown-menu dropdown-menu-right">
+
+        <form class="example" (submit)="onSubmitClient()" [formGroup]="clientForm">
+          <input formControlName="client_nid" type="text" placeholder="Client's ID.." name="nid">
+          <button type="submit"><img src="assets/images/search.png" width="20" alt="Trans"></button>
+      
+</form>
+
+        <form class="example" (submit)="onSubmitAccount()" [formGroup]="accountForm">
+          <input formControlName="bank_account" type="text" placeholder="Bank Account.." name="account">
+          <button type="submit"><img src="assets/images/search.png" width="20" alt="Trans"></button>
+
+</form>
+
+       </div>
+
+
+
+      </div> <!--Client Settings-->
+
+<div class="col-sm-6"> <!--TRANSACTIONS-->
+
+
+
+    <div class="btn-group">
+
+  <a  href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/images/trans.png" width="60px" alt="Trans">
+    <p style="font-size:12px"><strong> <font color="#5DADE2">Transaction Settings</font> </strong></p>
+
+  </a>
+
+      <div class="dropdown-menu dropdown-menu-right">
+      <a href="teller-new-transaction/deposit">  <button  class="dropdown-item" type="button">Deposit</button> </a>
+      <a href="teller-new-transaction/withdraw">  <button  class="dropdown-item" type="button">Withdraw</button> </a>
+      </div>
+    </div>
+
+
+
+</div> <!--transactions-->
+
+
+
+</div> <!--ROW2-->
+
+</div>
+</div>
+</div><!-- content container -->
+
+
+
+
+</div>
+</html>
